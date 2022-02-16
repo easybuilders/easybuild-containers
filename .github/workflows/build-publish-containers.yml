@@ -73,7 +73,11 @@ jobs:
     strategy:
       matrix:
         tag:
+          - centos-7.9.2009
+          - centos-8.4.2105
           - opensuse-15.4
+          - rockylinux-8.5
+          - ubuntu-20.04
     steps:
       - name: Login to GitHub Container Registry
         if: github.event_name != 'pull_request'
