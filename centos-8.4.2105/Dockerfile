@@ -3,7 +3,7 @@ FROM centos:8.4.2105
 # see https://techglimpse.com/failed-metadata-repo-appstream-centos-8
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* \
 && sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* \
-&& for repo in `ls /etc/yum.repos.d/CentOS-*`; do echo $repo; echo "timeout=1000" >> $repo; done \
+&& for repo in `ls /etc/yum.repos.d/CentOS-*`; do echo $repo; echo "timeout=3600" >> $repo; done \
 && dnf -y update \
 # enable PowerTools repository, required by Lmod in EPEL
 && dnf -y install dnf-plugins-core && dnf config-manager --set-enabled powertools \
