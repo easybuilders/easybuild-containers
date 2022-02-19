@@ -4,3 +4,4 @@ RUN apt update \
 && curl -OL https://github.com/surak/Lmod/releases/download/8.6.12/lmod_8.6.12_all.deb \
 && apt remove -y --purge curl \
 && apt install -y ./lmod_8.6.12_all.deb
+RUN apt install -y bzip2 diffutils file gcc g++ git gzip libibverbs-dev libssl-dev make patch tar unzip xz-utils
