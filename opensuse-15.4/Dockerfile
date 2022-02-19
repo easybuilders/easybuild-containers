@@ -1,2 +1,3 @@
 FROM opensuse/leap:15.4
 RUN zypper --non-interactive install python3 lua-lmod
+RUN zypper --non-interactive install bzip2 diffutils file gcc-c++ git gzip make openssl rdma-core patch tar unzip xz
