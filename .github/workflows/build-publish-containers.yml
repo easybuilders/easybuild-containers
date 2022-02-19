@@ -13,6 +13,7 @@ jobs:
         tag:
           - centos-7.9.2009
           - centos-8.4.2105
+          - fedora-35
           - opensuse-15.4
           - rockylinux-8.5
           - ubuntu-20.04
@@ -75,6 +76,7 @@ jobs:
         tag:
           - centos-7.9.2009
           - centos-8.4.2105
+          - fedora-35
           - opensuse-15.4
           - rockylinux-8.5
           - ubuntu-20.04
