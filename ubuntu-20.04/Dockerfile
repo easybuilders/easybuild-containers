@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update \
 && apt install -y curl python3 python3-distutils python3-pip \
 && LMOD_VERSION=8.6.12 \
