@@ -1,4 +1,5 @@
 FROM opensuse/leap:15.4
 RUN zypper --non-interactive install python3 python3-pip lua-lmod
-RUN zypper --non-interactive install bzip2 curl diffutils file gcc-c++ git gzip make openssl rdma-core patch tar unzip which xz
+# glibc-i18ndata provides locale stuff, required for example by libxml2 test suite
+RUN zypper --non-interactive install bzip2 curl diffutils file gcc-c++ git glibc-i18ndata gzip make openssl rdma-core patch tar unzip which xz
 RUN python3 -m pip install archspec
