@@ -1,4 +1,5 @@
 FROM centos:8.4.2105
+RUN useradd -ms /bin/bash easybuild
 # fix "Failed to download metadata" issue, because CentOS 8 reached EOL
 # see https://techglimpse.com/failed-metadata-repo-appstream-centos-8
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* \
