@@ -25,3 +25,19 @@ To use these containers with Singularity:
   ```
   singularity exec docker://ghcr.io/easybuilders/ubuntu-20.04 bash -c "cat /etc/debian_version; cat /etc/os-release"
   ```
+
+## Build custom container images
+
+You can build a custom container image on top of one of the provided container images.
+
+For example, to build a CentOS 7.9 container that also includes the `openssl11*` packages using Singularity:
+
+```
+$ cat CentOS-7.9-openssl11.def
+Bootstrap: docker
+From: ghcr.io/easybuilders/centos-7.9
+%post
+    yum -y install openssl11 openssl11-devel
+
+$ sudo singularity build CentOS-7.9-openssl11.sif CentOS-7.9-openssl11.def
+```
