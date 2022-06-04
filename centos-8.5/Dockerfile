@@ -5,6 +5,7 @@ RUN useradd -ms /bin/bash easybuild
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* \
 && sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* \
 && for repo in `ls /etc/yum.repos.d/CentOS-*`; do echo $repo; echo "timeout=3600" >> $repo; done \
+# note: this also results in updating to CentOS 8.5.2111 (final 8.5 release)
 && dnf -y update \
 # enable PowerTools repository, required by Lmod in EPEL
 && dnf -y install dnf-plugins-core && dnf config-manager --set-enabled powertools \
