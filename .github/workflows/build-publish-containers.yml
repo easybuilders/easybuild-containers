@@ -83,6 +83,7 @@ jobs:
           - opensuse-15.3
           - rockylinux-8.5
           - almalinux-8.6
+          - almalinux-9.0
           - ubuntu-20.04
     steps:
       - name: Login to GitHub Container Registry
