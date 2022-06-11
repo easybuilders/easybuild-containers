@@ -7,6 +7,7 @@ Containers for testing EasyBuild, built automatically for `x86_64` and `aarch64`
 
 * `centos-7.9`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-7.9/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-7.9)
 * `centos-8.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-8.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-8.5)
+* `centosstream-9`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centosstream-9/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centosstream-9)
 * `fedora-35`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/fedora-35/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/fedora-35)
 * `fedora-36`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/fedora-36/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/fedora-36)
 * `opensuse-15.3`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/opensuse-15.3/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/opensuse-15.3)
