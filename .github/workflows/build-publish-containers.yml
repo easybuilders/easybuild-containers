@@ -81,6 +81,7 @@ jobs:
           - fedora-35
           - fedora-36
           - opensuse-15.3
+          - opensuse-15.4
           - rockylinux-8.5
           - almalinux-8.6
           - ubuntu-20.04
