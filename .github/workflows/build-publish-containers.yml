@@ -17,9 +17,12 @@ jobs:
           - fedora-35
           - fedora-36
           - opensuse-15.3
+          - opensuse-15.4
           - rockylinux-8.5
           - almalinux-8.6
+          - almalinux-9.0
           - ubuntu-20.04
+          - ubuntu-22.04
       fail-fast: false
     steps:
       - name: Check out the repo
@@ -79,6 +82,7 @@ jobs:
         tag:
           - centos-7.9
           - centos-8.5
+          - centosstream-9
           - fedora-35
           - fedora-36
           - opensuse-15.3
