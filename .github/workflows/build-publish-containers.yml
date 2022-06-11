@@ -85,6 +85,7 @@ jobs:
           - opensuse-15.4
           - rockylinux-8.5
           - almalinux-8.6
+          - almalinux-9.0
           - ubuntu-20.04
           - ubuntu-22.04
     steps:
