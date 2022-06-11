@@ -12,6 +12,7 @@ Containers for testing EasyBuild, built automatically for `x86_64` and `aarch64`
 * `opensuse-15.3`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/opensuse-15.3/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/opensuse-15.3)
 * `rockylinux-8.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-8.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-8.5)
 * `ubuntu-20.04`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/ubuntu-20.04/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/ubuntu-20.04)
+* `ubuntu-22.04`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/ubuntu-22.04/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/ubuntu-22.04)
 
 ## Usage with Singularity
 

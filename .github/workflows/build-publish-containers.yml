@@ -84,6 +84,7 @@ jobs:
           - rockylinux-8.5
           - almalinux-8.6
           - ubuntu-20.04
+          - ubuntu-22.04
     steps:
       - name: Login to GitHub Container Registry
         if: github.event_name == 'push' && github.ref_name == 'main'
