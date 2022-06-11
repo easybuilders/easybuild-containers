@@ -13,6 +13,7 @@ jobs:
         tag:
           - centos-7.9
           - centos-8.5
+          - centosstream-9
           - fedora-35
           - fedora-36
           - opensuse-15.3
