@@ -1,4 +1,4 @@
-FROM rockylinux/rockylinux:8.6.20220515
+FROM rockylinux/rockylinux:8.6
 RUN useradd -ms /bin/bash easybuild
 # enable PowerTools repository, required by Lmod in EPEL
 RUN dnf -y install dnf-plugins-core && dnf config-manager --set-enabled powertools \
