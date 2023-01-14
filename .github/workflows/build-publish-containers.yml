@@ -20,6 +20,7 @@ jobs:
           - opensuse-15.4
           - rockylinux-8.5
           - rockylinux-8.6
+          - rockylinux-8.7
           - rockylinux-9.0
           - almalinux-8.6
           - almalinux-9.0
@@ -91,6 +92,7 @@ jobs:
           - opensuse-15.4
           - rockylinux-8.5
           - rockylinux-8.6
+          - rockylinux-8.7
           - rockylinux-9.0
           - almalinux-8.6
           - almalinux-9.0
