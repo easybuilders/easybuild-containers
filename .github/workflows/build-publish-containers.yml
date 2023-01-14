@@ -22,6 +22,7 @@ jobs:
           - rockylinux-8.6
           - rockylinux-8.7
           - rockylinux-9.0
+          - rockylinux-9.1
           - almalinux-8.6
           - almalinux-9.0
           - ubuntu-20.04
@@ -94,6 +95,7 @@ jobs:
           - rockylinux-8.6
           - rockylinux-8.7
           - rockylinux-9.0
+          - rockylinux-9.1
           - almalinux-8.6
           - almalinux-9.0
           - ubuntu-20.04
