@@ -120,8 +120,8 @@ jobs:
         run: |
           docker manifest create \
             ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }} \
-            --amend ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64 \
-            --amend ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64 \
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64
 
       - name: Push manifest
         if: github.event_name == 'push' && github.ref_name == 'main'
