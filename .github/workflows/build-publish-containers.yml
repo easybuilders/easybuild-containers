@@ -85,6 +85,7 @@ jobs:
     strategy:
       matrix:
         tag:
+          - centos-7.9-python3
           - centos-7.9
           - centos-8.5
           - centosstream-9
