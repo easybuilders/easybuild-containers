@@ -57,14 +57,13 @@ jobs:
       - name: Convert and store repository owner in lowercase
         run: |
           echo REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
-          echo DOCKERFILE=${{ matrix.tag }}/Dockerfile >> $GITHUB_ENV
           echo IMAGE_TAG=$(date +"%F")-{{ github.GITHUB_RUN_ID }} >> $GITHUB_ENV
 
       - name: Build and push to GitHub Packages
         uses: docker/build-push-action@v3
         with:
           tags: ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}:{{ env.IMAGE_TAG }}
-          file: ${{ env.DOCKERFILE }}
+          context: ${{ matrix.tag }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-from: type=local,src=/tmp/.buildx-cache
