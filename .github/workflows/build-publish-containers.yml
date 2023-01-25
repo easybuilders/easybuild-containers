@@ -58,7 +58,6 @@ jobs:
         run: |
           echo REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
           echo IMAGE_TAG=$(date +"%F")-${{ github.run_id }}.${{ github.run_number }} >> $GITHUB_ENV
-
       - name: Build and push to GitHub Packages
         uses: docker/build-push-action@v3
         with:
@@ -72,8 +71,29 @@ jobs:
           push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
-
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+      - name: Build and push to amd64
+        uses: docker/build-push-action@v3
+        with:
+          tags: |
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64:latest
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64:${{ env.IMAGE_TAG }}
+          context: ${{ matrix.tag }}
+          platforms: linux/amd64
+          push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+      - name: Build and push to arm64
+        uses: docker/build-push-action@v3
+        with:
+          tags: |
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64:latest
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64:${{ env.IMAGE_TAG }}
+          context: ${{ matrix.tag }}
+          platforms: linux/arm64
+          push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+
+      
