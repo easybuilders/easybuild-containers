@@ -6,7 +6,7 @@ RUN dnf -y update \
 && dnf -y install dnf-plugins-core && dnf config-manager --set-enabled crb \
 && dnf -y install epel-release && dnf -y install python3 python3-pip
 # --allowerasing is required to allow to install curl and remove conflicting curl-minimal which is part of the base image
-RUN dnf -y --allowerasing install bzip2 curl diffutils file gcc-c++ git gzip make openssl openssl-devel rdma-core-devel patch tar unzip which xz
+RUN dnf -y --allowerasing install bzip2 curl diffutils file gcc-c++ git gzip make openssl openssl-devel rdma-core-devel patch sudo tar unzip which xz
 # install requirements to build Lmod
 RUN dnf -y install procps-ng lua-filesystem lua-posix lua-devel lua tcl
 # Build Lmod from source
