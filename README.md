@@ -22,6 +22,7 @@ Containers for testing EasyBuild, built automatically for `x86_64` and `aarch64`
 * `rockylinux-8.8`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-8.8/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-8.8)
 * `rockylinux-9.0`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-9.0/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-9.0)
 * `rockylinux-9.1`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-9.1/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-9.1)
+* `rockylinux-9.2`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-9.2/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-9.2)
 * `ubuntu-20.04`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/ubuntu-20.04/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/ubuntu-20.04)
 * `ubuntu-22.04`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/ubuntu-22.04/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/ubuntu-22.04)
 
