@@ -21,6 +21,7 @@ jobs:
           - rockylinux-8.5
           - rockylinux-8.6
           - rockylinux-8.7
+          - rockylinux-8.8
           - rockylinux-9.0
           - rockylinux-9.1
           - almalinux-8.6
@@ -96,4 +97,3 @@ jobs:
           push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-from: type=local,src=/tmp/.buildx-cache
 
-      
