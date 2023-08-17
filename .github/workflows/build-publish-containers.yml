@@ -9,7 +9,6 @@ jobs:
       contents: read
     strategy:
       matrix:
-        platform: [amd64, arm64]
         tag:
           - centos-7.9-python3
           - centos-7.9
@@ -58,71 +57,43 @@ jobs:
       - name: Convert and store repository owner in lowercase
         run: |
           echo REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
-          echo DOCKERFILE=${{ matrix.tag }}/Dockerfile >> $GITHUB_ENV
-
+          echo IMAGE_TAG=$(date +"%F")-${{ github.run_id }}.${{ github.run_number }} >> $GITHUB_ENV
       - name: Build and push to GitHub Packages
         uses: docker/build-push-action@v3
         with:
-          tags: ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-${{ matrix.platform }}
-          file: ${{ env.DOCKERFILE }}
-          platforms: linux/${{ matrix.platform }}
+          tags: |
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}:latest
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}:${{ env.IMAGE_TAG }}
+          context: ${{ matrix.tag }}
+          platforms: |
+            linux/amd64
+            linux/arm64
           push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
-
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-
-  docker_manifest:
-    name: Docker manifest
-    needs: build_publish
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    strategy:
-      matrix:
-        tag:
-          - centos-7.9-python3
-          - centos-7.9
-          - centos-8.5
-          - centosstream-9
-          - fedora-35
-          - fedora-36
-          - opensuse-15.3
-          - opensuse-15.4
-          - rockylinux-8.5
-          - rockylinux-8.6
-          - rockylinux-8.7
-          - rockylinux-9.0
-          - rockylinux-9.1
-          - almalinux-8.6
-          - almalinux-9.0
-          - ubuntu-20.04
-          - ubuntu-22.04
-    steps:
-      - name: Login to GitHub Container Registry
-        if: github.event_name == 'push' && github.ref_name == 'main'
-        uses: docker/login-action@v2
+      - name: Build and push to amd64
+        uses: docker/build-push-action@v3
         with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          tags: |
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64:latest
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64:${{ env.IMAGE_TAG }}
+          context: ${{ matrix.tag }}
+          platforms: linux/amd64
+          push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+      - name: Build and push to arm64
+        uses: docker/build-push-action@v3
+        with:
+          tags: |
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64:latest
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64:${{ env.IMAGE_TAG }}
+          context: ${{ matrix.tag }}
+          platforms: linux/arm64
+          push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          cache-from: type=local,src=/tmp/.buildx-cache
 
-      - name: Convert and store repository owner in lowercase
-        run: |
-          echo REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
-
-      - name: Run docker manifest
-        if: github.event_name == 'push' && github.ref_name == 'main'
-        run: |
-          docker manifest create \
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }} \
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-amd64 \
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}-arm64
-
-      - name: Push manifest
-        if: github.event_name == 'push' && github.ref_name == 'main'
-        run: docker manifest push ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ matrix.tag }}
+      
