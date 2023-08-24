@@ -21,8 +21,10 @@ jobs:
           - rockylinux-8.5
           - rockylinux-8.6
           - rockylinux-8.7
+          - rockylinux-8.8
           - rockylinux-9.0
           - rockylinux-9.1
+          - rockylinux-9.2
           - almalinux-8.6
           - almalinux-9.0
           - ubuntu-20.04
@@ -96,4 +98,3 @@ jobs:
           push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-from: type=local,src=/tmp/.buildx-cache
 
-      
