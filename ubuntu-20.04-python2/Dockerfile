@@ -3,6 +3,8 @@ RUN useradd -ms /bin/bash easybuild
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update \
 && apt install -y curl python2 python-pip-whl \
+&& curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py \
+&& python2 get-pip.py \
 && LMOD_VERSION=8.6.12 \
 && curl -OL https://github.com/surak/Lmod/releases/download/${LMOD_VERSION}/lmod_${LMOD_VERSION}_all.deb \
 && apt install -y ./lmod_${LMOD_VERSION}_all.deb
