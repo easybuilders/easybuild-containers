@@ -22,6 +22,7 @@ jobs:
           - rockylinux-8.6
           - rockylinux-8.7
           - rockylinux-8.8
+          - rockylinux-8.9
           - rockylinux-9.0
           - rockylinux-9.1
           - rockylinux-9.2
