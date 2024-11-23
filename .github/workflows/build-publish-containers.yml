@@ -15,7 +15,6 @@ jobs:
           - centos-8.5
           - centosstream-9
           - fedora-36
-          - opensuse-15.3
           - opensuse-15.4
           - rockylinux-8.9
           - rockylinux-9.3
