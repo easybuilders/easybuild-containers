@@ -1,4 +1,4 @@
-FROM fedora:35
+FROM fedora:41
 RUN useradd -ms /bin/bash easybuild
 RUN dnf -y install python3 python3-pip Lmod
 # glibc-langpack-en provides locale stuff (for en_US.UTF-8)

@@ -14,21 +14,12 @@ jobs:
           - centos-7.9
           - centos-8.5
           - centosstream-9
-          - fedora-35
-          - fedora-36
-          - opensuse-15.3
-          - opensuse-15.4
-          - rockylinux-8.5
-          - rockylinux-8.6
-          - rockylinux-8.7
-          - rockylinux-8.8
-          - rockylinux-8.9
-          - rockylinux-9.0
-          - rockylinux-9.1
-          - rockylinux-9.2
-          - rockylinux-9.3
-          - almalinux-8.6
-          - almalinux-9.0
+          - fedora-41
+          - opensuse-15.6
+          - rockylinux-8.10
+          - rockylinux-9.5
+          - almalinux-8.10
+          - almalinux-9.5
           - ubuntu-20.04
           - ubuntu-20.04-python2
           - ubuntu-22.04
