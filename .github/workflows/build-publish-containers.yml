@@ -19,7 +19,7 @@ jobs:
           - rockylinux-8.10
           - rockylinux-9.5
           - almalinux-8.6
-          - almalinux-9.0
+          - almalinux-9.5
           - ubuntu-20.04
           - ubuntu-20.04-python2
           - ubuntu-22.04

@@ -7,7 +7,7 @@ Containers for testing EasyBuild, built automatically for `x86_64` and `aarch64`
 
 
 * `almalinux-8.6`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/almalinux-8.6/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/almalinux-8.6)
-* `almalinux-9.0`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/almalinux-9.0/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/almalinux-9.0)
+* `almalinux-9.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/almalinux-9.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/almalinux-9.5)
 * `centos-7.9`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-7.9/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-7.9)
 * `centos-7.9-python3`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-7.9-python3/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-7.9-python3)
 * `centos-8.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-8.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-8.5)
