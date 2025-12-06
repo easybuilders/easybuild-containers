@@ -23,13 +23,14 @@ jobs:
           - almalinux-9.5
           - ubuntu-20.04
           - ubuntu-20.04-python2
-          - ubuntu-20.04-python36
           - ubuntu-22.04
           - ubuntu-24.04
       fail-fast: false
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
