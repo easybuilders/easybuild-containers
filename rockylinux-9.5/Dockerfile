@@ -6,7 +6,8 @@ RUN dnf -y update \
 && dnf -y install epel-release && dnf -y install python3 python3-pip Lmod
 # --allowerasing is required to allow to install curl and remove conflicting curl-minimal which is part of the base image
 # glibc-langpack-en provides locale stuff (for en_US.UTF-8)
-RUN dnf -y --allowerasing install bzip2 curl diffutils file findutils gcc-c++ git glibc-langpack-en gzip make openssl openssl-devel rdma-core-devel patch sudo tar unzip which xz
+# glibc-gconv-extra provides support for ISO-8859-5 encoding (required by libxml2 tests)
+RUN dnf -y --allowerasing install bzip2 curl diffutils file findutils gcc-c++ git glibc-gconv-extra glibc-langpack-en gzip make openssl openssl-devel rdma-core-devel patch sudo tar unzip which xz
 # install requirements to build OpenSSL 1.1 and 3.0 from source
 RUN dnf -y install perl-FindBin perl-File-Compare perl-File-Copy perl-IPC-Cmd perl-Pod-Html
 RUN python3 -m pip install archspec
