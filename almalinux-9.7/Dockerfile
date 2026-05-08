@@ -1,4 +1,4 @@
-FROM almalinux:9.5
+FROM almalinux:9.7
 RUN useradd -ms /bin/bash easybuild
 RUN dnf -y update \
 # enable crb repository
