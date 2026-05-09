@@ -17,10 +17,10 @@ jobs:
           - fedora-41
           - opensuse-15.6
           - rockylinux-8.10
-          - rockylinux-9.5
+          - rockylinux-9.7
           - rockylinux-10.1
           - almalinux-8.10
-          - almalinux-9.5
+          - almalinux-9.7
           - ubuntu-20.04
           - ubuntu-20.04-python2
           - ubuntu-22.04

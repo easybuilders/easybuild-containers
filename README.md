@@ -7,7 +7,7 @@ Containers for testing EasyBuild, built automatically for `x86_64` and `aarch64`
 
 
 * `almalinux-8.10`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/almalinux-8.10/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/almalinux-8.10)
-* `almalinux-9.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/almalinux-9.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/almalinux-9.5)
+* `almalinux-9.7`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/almalinux-9.7/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/almalinux-9.7)
 * `centos-7.9`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-7.9/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-7.9)
 * `centos-7.9-python3`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-7.9-python3/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-7.9-python3)
 * `centos-8.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/centos-8.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/centos-8.5)
@@ -15,7 +15,7 @@ Containers for testing EasyBuild, built automatically for `x86_64` and `aarch64`
 * `fedora-41`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/fedora-41/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/fedora-41)
 * `opensuse-15.6`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/opensuse-15.6/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/opensuse-15.6)
 * `rockylinux-8.10`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-8.10/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-8.10)
-* `rockylinux-9.5`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-9.5/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-9.5)
+* `rockylinux-9.7`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-9.7/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-9.7)
 * `rockylinux-10.1`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/rockylinux-10.1/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/rockylinux-10.1)
 * `ubuntu-20.04`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/ubuntu-20.04/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/ubuntu-20.04)
 * `ubuntu-20.04-python2`: [recipe](https://github.com/easybuilders/easybuild-containers/blob/main/ubuntu-20.04-python2/Dockerfile), [image @ ghcr.io](https://github.com/easybuilders/easybuild-containers/pkgs/container/ubuntu-20.04-python2)
