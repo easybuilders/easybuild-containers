@@ -18,7 +18,7 @@ jobs:
           - opensuse-15.6
           - rockylinux-8.10
           - rockylinux-9.7
-          - rockylinux-10.1
+          - rockylinux-10.2
           - almalinux-8.10
           - almalinux-9.7
           - ubuntu-20.04
