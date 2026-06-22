@@ -1,4 +1,4 @@
-FROM rockylinux/rockylinux:10.1
+FROM rockylinux/rockylinux:10.2
 RUN useradd -ms /bin/bash easybuild
 RUN dnf -y update \
 # enable crb repository
